@@ -50,7 +50,7 @@ dt_melted <- melt(dt, id = c("subject", "activity"))
 dt_mean <- dcast(dt_melted, subject + activity ~ variable, mean)
 
 #save table
-write.table(dt_mean, "tidy_df.txt", row.names = FALSE, quote = FALSE)
+write.table(dt_mean, "tidy.txt", row.names = FALSE, quote = FALSE)
 
 #read table for testing reasons
-test = read.table("tidy_df.txt", sep = " ", header = T)
+test = read.table("tidy.txt", sep = " ", header = T)
